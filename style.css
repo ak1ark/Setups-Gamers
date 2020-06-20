@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Staatliches', cursive;
+}
+
+
+/*Menu*/
+
+header {
+    height: 90px;
+    background: #051218;
+}
+
+.inner-width {
+    max-width: 1000px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+.icon {
+    float: left;
+    padding: 20px 0;
+}
+
+.icon img {
+    height: 50px;
+}
+
+.navigation-menu {
+    float: right;
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+}
+
+.navigation-menu a {
+    margin-left: 10px;
+    color: #dddddd;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: .3s linear;
+}
+
+.navigation-menu a:hover {
+    background: #ffffff;
+    color: #1C1C1C;
+    transform: scale(1.1);
+}
+
+.navigation-menu i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.home {
+    color: #CD0000;
+}
+
+.setups {
+    color: #CD0000;
+}
+
+.info {
+    color: #CD0000;
+}
+
+.menu-toggle-btn {
+    float: right;
+    height: 90px;
+    line-height: 90px !important;
+    color: #ffffff;
+    font-size: 26px;
+    display: none !important;
+    cursor: pointer;
+}
+
+
+/*Imagem Principal*/
+
+.logo {
+    background: no-repeat center/ cover url('image/Modern\ Hiking\ Tumblr\ Banner.jpg');
+    height: calc(100vh - 300px);
+}
+
+
+/*Imagens*/
+
+section {
+    background-color: #051218;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.setups {
+    padding: 10px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.setups .title {
+    padding: 25px 0px 50px 0px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.setups .cards-content {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+}
+
+.setups .card-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 380px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.setups .card-image:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    padding: 10px;
+}
+
+
+/*Rodapé*/
+
+footer .redes-sociais {
+    margin: 0;
+    background: #051218;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+footer .redes-sociais img {
+    margin-top: 10px;
+}
+
+footer .redes-sociais .git img {
+    padding: 10px;
+    margin-right: 0 auto;
+}
+
+footer .redes-sociais .link img {
+    height: 50px;
+    width: 45px;
+    padding: 5px 0px 0px 0px;
+}
+
+footer .redes-sociais img:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.4);
+    transition: 0.70s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+footer h1 {
+    background: #051218;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* RESPONSIVIDADE*/
+
+@media screen and (max-width:800px) {
+    .menu-toggle-btn {
+        display: block !important;
+    }
+    .navigation-menu {
+        position: fixed;
+        width: 100%;
+        max-width: 400px;
+        background: #051218;
+        top: 90px;
+        right: 0;
+        display: none;
+        padding: 20px 40px;
+        box-sizing: border-box;
+    }
+    .navigation-menu::before {
+        content: "";
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #051218;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+    }
+    .navigation-menu a {
+        display: block;
+        margin: 10px 0;
+    }
+    .navigation-menu.active {
+        display: block;
+    }
+    .setups .cards-content {
+        object-fit: center/ cover;
+    }
+    .setups .card img {
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+        padding: 20px;
+    }
+    .setups .card-image:hover {
+        position: static;
+        background: white;
+        padding: 3px;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+    .logo {
+        height: calc(100vh - 400px);
+    }
+    footer {
+        margin: 0 auto;
+    }
+    footer .redes-sociais {
+        background: #051218;
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+    }
+    footer .redes-sociais .linkedin {
+        height: 50px;
+        width: 45px;
+    }
+    footer .redes-sociais img {
+        margin: 0px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .setups .card-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .setups .cards-content {
+        object-fit: center/ cover;
+    }
+    .setups .card img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 0px 65px 0px 60px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .setups .card-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .setups .cards-content {
+        object-fit: center/ cover;
+    }
+    .setups .card img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 0px 50px 0px 50px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .setups .card-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .setups .cards-content {
+        object-fit: center/ cover;
+    }
+    .setups .card img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin: 0px 30px 0px 30px;
+    }
+}
